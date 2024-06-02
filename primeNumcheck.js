@@ -1,13 +1,29 @@
-var num = 100;
+var num = 13;
+var isprime = true;
+
 
 if (typeof num !== 'number') {
-    console.log("Not a number");
+    console.log("It is not a number");
 }
-else if (num % 2 === 13) {
-    console.log("it is even");
+else if (num === 1) {
+    console.log("Number is not prime or composite");
 }
-else {
-    console.log("it is odd");
-}
+else if (num > 1) {
+    for (var i = 2; i < num; i++) {
+        if (num % i === 0) {
+            isprime = false;
+            break;
+        }
 
+    }
+    if (isprime) {
+        console.log("Number is prime");
+
+    } else {
+        console.log("Number is not prime");
+    }
+} else {
+    console.log("Number is negative number")
+
+}
 
